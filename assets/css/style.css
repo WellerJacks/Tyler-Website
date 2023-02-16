@@ -1,0 +1,183 @@
+/* OFL Fonts / Beau Rivage */
+@font-face {
+  font-family: "Gnomon";
+  src: url("../font/gnomon/Gnomon-Simple.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg-color: #f8f4e3;
+  --text-color: #2a2b2a;
+  --secondary-color: #eb4a67;
+  --accent-color: #ff8966;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Navbar */
+
+.navbar,
+.navbar-expand-lg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+}
+
+.tyler-logo {
+  width: 100px;
+  height: 64.85px;
+  margin: 20px 0 0 0;
+}
+
+/* Navbar End */
+
+/* Hero */
+
+#myHero {
+  position: absolute;
+  width: 100%;
+  height: 660px;
+  left: 0px;
+  top: 0px;
+  background-image: linear-gradient(
+      rgba(15, 14, 14, 0.63),
+      rgba(15, 14, 14, 0.63)
+    ),
+    url("../img/hero-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: center;
+  z-index: 1;
+}
+
+.hero-banner {
+  margin: 20px 0 0 0;
+  position: absolute;
+  width: 869px;
+  height: 359px;
+  left: auto;
+  top: 80px;
+  content: url("../img/hero-banner.webp");
+}
+
+@media only screen and (max-width: 700px) {
+  #myHero {
+    position: absolute;
+    width: 100%;
+    height: 460px;
+    left: 0px;
+    top: 0px;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: unset;
+  }
+  .hero-banner {
+    content: url("../img/hero-banner-mobile.png");
+    position: absolute;
+    width: 350px;
+    height: 144.59px;
+    left: auto;
+    top: 150px;
+  }
+}
+
+/* Hero End */
+
+/* Content */
+
+#myContent {
+  position: relative;
+  margin: 612px 0;
+}
+
+.card-img-top,
+.card {
+  width: 22.75rem;
+  height: auto;
+  border: transparent;
+}
+
+.card__overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  border-radius: 10px;
+  visibility: none;
+  transition: 0.5s ease-in-out;
+  background-color: rgba(235, 74, 103, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover .card__overlay {
+  opacity: 1;
+}
+
+.overlay__text {
+  width: 313px;
+  height: 42px;
+  font-family: Gnomon;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 21px;
+  color: var(--bg-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay__text a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.ai-link-chain {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.overlay__text .btn-primary {
+  background-color: var(--bg-color);
+  border: transparent;
+}
+
+.overlay__text a,
+.overlay__text .btn-primary {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  transition: 0.5s ease-in-out;
+}
+
+.overlay__text a,
+.overlay__text .btn-primary:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+/* Content End */
